@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        this is the head
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <py-script src="./game.py"></py-script>
+    </head>
+    <body>
+        <!-- <py-script src="./game.py"></py-script> -->
+        <header>
+            <nav>this is the navbar</nav>
+
+        </header> 
+        <main>
+            <section>
+                <h1>Rock, Paper, Scissors</h1>
+            </section>
+            <div id="manual-write">THISSS</div>
+            <button py-click="write_to_page()" id="manual">Say Hello</button>
+            <div id="mine"></div>
+        </main>
+        <footer>
+            this is the footer
+        </footer>  
+        <py-script>
+            def write_to_page():
+                test = 'XXXXXX'
+                manual_div = Element("manual-write")
+                thisElement = Element("mine")
+                manual_div.element.innerHTML = "<p><b>Hello Worldadsads</b></p>"
+                thisElement.element.innerHTML = f"<p><b>{player_score}</b></p>"
+        </py-script> 
+    </body>
+</html>
